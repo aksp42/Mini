@@ -1,4 +1,3 @@
-import java.lang.runtime.SwitchBootstraps;
 import java.util.Scanner;
 import java.util.Random;
 public class rock_paper_scissor {
@@ -16,7 +15,7 @@ public class rock_paper_scissor {
             default : System.out.println("Choose again ! you chose a Invalid move");
         }
          Random r=new Random();
-           int Computer=r.nextInt((3)+(1));
+           int Computer=r.nextInt(3)+1;
         switch(Computer){
             case 1 : System.out.println("Computer have chosen : "  + Computer);
                 break;
@@ -27,7 +26,7 @@ public class rock_paper_scissor {
         }
         if (Player==Computer){
             System.out.println("Match tie");}
-        else if (Player==1 && Computer==2 || Player==2 && Computer==3 || Player==3 && Computer==1  ){
+        else if ((Player==1 && Computer==2) || (Player==2 && Computer==3) || (Player==3 && Computer==1)  ){
             System.out.println("You Lost the Game! Computer Won");
         }
         else if (Player==2 && Computer==1 || Player==3 && Computer==2 || Player==1 && Computer==3  ) {
